@@ -24,6 +24,7 @@ class HashTable:
         # Your code here
         self.capacity = capacity
         self.items = 0
+        self.arr = [None for i in range(self.capacity)]
 
 
     def get_num_slots(self):
@@ -58,6 +59,7 @@ class HashTable:
         """
 
         # Your code here
+        pass
 
 
     def djb2(self, key):
@@ -90,6 +92,8 @@ class HashTable:
         Implement this.
         """
         # Your code here
+        h = self.hash_index(key)
+        self.arr[h] = value
 
 
     def delete(self, key):
@@ -101,6 +105,8 @@ class HashTable:
         Implement this.
         """
         # Your code here
+        h = self.hash_index(key)
+        self.arr[h] = None
 
 
     def get(self, key):
@@ -112,6 +118,8 @@ class HashTable:
         Implement this.
         """
         # Your code here
+        h = self.hash_index(key)
+        return self.arr[h]
 
 
     def resize(self, new_capacity):
@@ -122,6 +130,7 @@ class HashTable:
         Implement this.
         """
         # Your code here
+        pass
 
 
 
