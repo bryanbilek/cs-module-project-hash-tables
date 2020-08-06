@@ -3,7 +3,7 @@ def word_count(s):
     words = s.lower().split()
     cache = {}
 
-    for word in words:
+    for word in words:        
         cache[word] = words.count(word)
     return cache
 
