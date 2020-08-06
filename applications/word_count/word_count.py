@@ -1,5 +1,11 @@
 def word_count(s):
     # Your code here
+    words = s.lower().split()
+    cache = {}
+
+    for word in words:
+        cache[word] = words.count(word)
+    return cache
 
 
 
